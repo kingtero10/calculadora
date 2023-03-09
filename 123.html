@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora</title>
+  </head>
+  <body>
+    
+    <h1>Calculadora</h1>
+    <form name="calculator">
+      <input class="calcular"type="text" name="answer" />
+      <br />
+      <input type="button" value="1" onclick="calculator.answer.value += '1'" />
+      <input type="button" value="2" onclick="calculator.answer.value += '2'" />
+      <input type="button" value="3" onclick="calculator.answer.value += '3'" />
+      <input type="button" value="+" onclick="calculator.answer.value += '+'" />
+      <br />
+      <input type="button" value="4" onclick="calculator.answer.value += '4'" />
+      <input type="button" value="5" onclick="calculator.answer.value += '5'" />
+      <input type="button" value="6" onclick="calculator.answer.value += '6'" />
+      <input type="button" value="-" onclick="calculator.answer.value += '-'" />
+      <br />
+      <input type="button" value="7" onclick="calculator.answer.value += '7'" />
+      <input type="button" value="8" onclick="calculator.answer.value += '8'" />
+      <input type="button" value="9" onclick="calculator.answer.value += '9'" />
+      <input type="button" value="*" onclick="calculator.answer.value += '*'" />
+      <br />
+      <input type="button" value="C" onclick="calculator.answer.value = ''" />
+      <input type="button" value="0" onclick="calculator.answer.value += '0'" />
+      <input type="button" value="=" onclick="calculator.answer.value = eval(calculator.answer.value)" />
+      <input type="button" value="/" onclick="calculator.answer.value += '/'" />
+    </form>
+
+    <script>
+        function calculate() {
+  var form = document.calculator;
+  var x = form.answer.value;
+  var y = eval(x);
+  form.answer.value = y;
+}
+    </script>
+    <style>
+        h1{
+            color: white;
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            background-image: url(./12.jpg);
+            background-size: cover;
+            margin-top:10% ;
+            margin-left: 40%;
+        }
+        input{
+            padding: 3%;
+        }
+        .calcular{
+            padding: 30px 80px;
+        }
+    
+       
+        
+
+    </style>
+  </body>
+</html>
